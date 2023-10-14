@@ -3,27 +3,26 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             // Extracting data for Plotly
-            var Dates = [...new Set(data.map(d => d[0]))]; // Get unique 
+            console.log(data[0])
+            let tickerName = [...new Set(data.map(d => d[1]))];
 
-            var Volume = dates.map(c => {
-                // Get the last value of pm10 for a city
-                var datesData = data.filter(d => d[0] === d);
-                return datesData.length ? datesData[0][1] : null;
-            });
+            console.log(tickerName);
+            let dates = data[2][2];
+            console.log(dates);
 
-            // Creating Plotly chart
-          
-            var trace1 = {
-                type: 'bar',
-                x: Dates,
-                y: Volume,
-                name: 'test'
-            };
-            var layout = {
-                title: 'High test price',
-                barmode: 'group'
-            };
-            Plotly.newPlot('plotly-graph', [trace1], layout);
+            timeStamp = [];
+
+            for (i=0; i < data.length; i++){
+                timeStamp.push(data[i][2]);
+            }
+
+            console.log(timeStamp)
+
+
+
+
+            Plotly.newPlot('plotly-graph', tickerName[2,5]);
+            
         })
         .catch(error => console.error('Error:', error));
 });
