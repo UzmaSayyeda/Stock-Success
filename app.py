@@ -8,7 +8,7 @@ def index():
     return render_template("index.html")
 
 @app.route("/api/data")
-def get_data():
+def get_data(ticker):
     conn = sqlite3.connect("test_stock_market.db")
     cursor = conn.cursor()
     query = "SELECT * FROM test_stock_market"

@@ -1,28 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('/api/data')
-        .then(response => response.json())
-        .then(data => {
-            // Extracting data for Plotly
-            console.log(data[0])
-            let tickerName = [...new Set(data.map(d => d[1]))];
-
-            console.log(tickerName);
-            let dates = data[2][2];
-            console.log(dates);
-
-            timeStamp = [];
-
-            for (i=0; i < data.length; i++){
-                timeStamp.push(data[i][2]);
-            }
-
-            console.log(timeStamp)
+  fetch(`/api/data${ticker}`)
+     .then(response => response.json())
+     .then(data => {
+       const [{ ticker, date, open }] = data;
+       const tickerNames = Object.keys(data);
 
 
+       const tickerData = {};
+       for (const tickerName of tickerNames) {
+         tickerData[tickerName] = data[tickerName].map((row) => ({ date: row.date, open: row.open }));
+       };
 
 
-            Plotly.newPlot('plotly-graph', tickerName[2,5]);
-            
-        })
-        .catch(error => console.error('Error:', error));
-});
+       const traces = [];
+       for (const tickerName of tickerNames) {
+         traces.push({
+           x: tickerData[tickerName].map((row) => row.date),
+           y: tickerData[tickerName].map((row) => row.open),
+           name: tickerName
+         });
+       };
+      
+       console.log(traces);
+       console.log(tickerData);
+       Plotly.newPlot('plotly-graph', traces);
+       console.log('Graph created');
+       
+     })
+     .catch(error => console.error('Error:', error));
+
+ });
+ 
