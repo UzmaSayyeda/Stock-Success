@@ -18,10 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             console.log(timeStamp)
 
+            let trace = {
+                type: "scatter",
+                mode : "lines",
+                x : timeStamp,
+                y : tickerName,
+                name : "some name"
+            }
 
 
 
-            Plotly.newPlot('plotly-graph', tickerName[2,5]);
+            Plotly.newPlot('plotly-graph', [trace]);
             
         })
         .catch(error => console.error('Error:', error));
