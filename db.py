@@ -11,10 +11,12 @@ engine = sql.create_engine("sqlite:///test_stock_market.db")
 import yfinance as yf
 from datetime import datetime
 
-start_date = datetime.now() - pd.DateOffset(months=60)
+start_date = datetime.now() - pd.DateOffset(months=3)
 end_date = datetime.now()
 
-tickers = ["XOM","CVX","SHW","DD","UPS","RTX","DUK","ED","JNJ","PFE","AMZN","MCD","KO","PG","AAPL","MSFT","GOOG","META"]
+
+''' "CVX","SHW","DD","UPS","RTX","DUK","ED","JNJ","PFE","AMZN","MCD","KO","PG","AAPL","MSFT","GOOG","META" '''
+tickers = ["XOM"]
 
 df_list = []
 
