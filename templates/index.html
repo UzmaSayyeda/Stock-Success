@@ -1,17 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
     <meta charset="UTF-8">
     <title>Stock Market Dashboard</title>
     <link rel="shortcut icon" type="image/png" href="../images/favicon-16x16.png">
     <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.plot.ly/plotly-latest.min.css"> -->
+
+
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     
 </head>
+
+
+
+
+
+
+
 <body>
+
+    <select id="ticker-select1"
+    onchange="updatePlotly(this.value)">
+    <option value="XOM">Exxon</option>
+    <option value="CVX">Chevron</option>
+    <option value="SHW">Sherwin-Williams</option>
+    <option value="DD">DuPont de Nemours</option>
+    <option value="UPS">United Parcel Service</option>
+    <option value="RTX">Rtx Corp</option>
+    <option value="DUK">Duke Energy</option>
+    <option value="ED">Consolidated Edison</option>
+    <option value="JNJ">Johnson & Johnson</option>
+    <option value="PFE">Pfizer</option>
+    <option value="AMZN">Amazon</option>
+    <option value="MCD">McDonald's</option>
+    <option value="KO">Coca-Cola</option>
+    <option value="PG">Procter & Gamble</option>
+    <option value="AAPL">Apple</option>
+    <option value="MSFT">Microsoft</option>
+    <option value="GOOG">Google</option>
+    <option value="META">S&P 500</option>
+    </select>   
+
+
+    <select id="ticker-select2"
+    onchange="updatePlotly(this.value)">
+    <option value="XOM">Exxon</option>
+    <option value="CVX">Chevron</option>
+    <option value="SHW">Sherwin-Williams</option>
+    <option value="DD">DuPont de Nemours</option>
+    <option value="UPS">United Parcel Service</option>
+    <option value="RTX">Rtx Corp</option>
+    <option value="DUK">Duke Energy</option>
+    <option value="ED">Consolidated Edison</option>
+    <option value="JNJ">Johnson & Johnson</option>
+    <option value="PFE">Pfizer</option>
+    <option value="AMZN">Amazon</option>
+    <option value="MCD">McDonald's</option>
+    <option value="KO">Coca-Cola</option>
+    <option value="PG">Procter & Gamble</option>
+    <option value="AAPL">Apple</option>
+    <option value="MSFT">Microsoft</option>
+    <option value="GOOG">Google</option>
+    <option value="META">S&P 500</option>
+    </select>  
+
+
+
+
+
     <h1>Stock Market Dashboard</h1>
     <div id="plotly-graph" style="height: 500px;"></div>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="../static/js/script.js"></script>
+
+
+
+
+
 </body>
 </html>
