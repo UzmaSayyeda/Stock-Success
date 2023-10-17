@@ -63,9 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   /// to update graph when page is loaded
-  var event = new Event('change');
-  selectElement1.dispatchEvent(event);
-  selectElement2.dispatchEvent(event);
+  // var event = new Event('change');
+  selectElement1.dispatchEvent(new Event('change'));
+  selectElement2.dispatchEvent(new Event('change'));
 
 
 
