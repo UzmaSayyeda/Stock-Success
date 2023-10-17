@@ -1,28 +1,41 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  let ticker = 'AAPL';
 
 
-  fetch(`/api/data/${ticker}`)
-  .then(response => response.json())
-  .then(data => {
+  var selectElemnt = document.getElementById('ticker-select');
+  selectElemnt.addEventListener('change', function () {
+
+    
+    let ticker = this.value;
+    fetch(`/api/data/${ticker}`)
+    .then(response => response.json())
+    .then(data => {
 
 
-    const traces = [{
-      x: data.map(row => row.Date),
-      y: data.map(row => row.Open),
-      name: ticker
-    }];
+      const traces = [{
+        x: data.map(row => row.Date),
+        y: data.map(row => row.Open),
+        name: ticker
+      }];
+
+
+      console.log(data.map(row => row.Date));
+      console.log(data.map(row => row.Open));
+
+      Plotly.newPlot('plotly-graph', traces);
+      console.log('Graph created');
+
+
+    })
+    .catch(error => console.error('Error:', error));
 
 
 
-    Plotly.newPlot('plotly-graph', traces);
-    console.log('Graph created');
 
+  });
 
-  })
-  .catch(error => console.error('Error:', error));
-
+  var event = new Event('change');
+  selectElemnt.dispatchEvent(event);
 
 
 

@@ -11,7 +11,7 @@ engine = sql.create_engine("sqlite:///test_stock_market1.db")
 import yfinance as yf
 from datetime import datetime
 
-start_date = datetime.now() - pd.DateOffset(months=3)
+start_date = datetime.now() - pd.DateOffset(months=60)
 end_date = datetime.now()
 
 
