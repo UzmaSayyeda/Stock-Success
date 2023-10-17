@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         
         Plotly.newPlot('plotly-graph', traces);
-        console.log('Graph created');
+       
 
         /// just to check if data is being fetched
         // console.log(data.map(row => row.Date));
