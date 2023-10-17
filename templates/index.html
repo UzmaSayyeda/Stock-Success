@@ -8,9 +8,8 @@
     <title>Stock Market Dashboard</title>
     <link rel="shortcut icon" type="image/png" href="../images/favicon-16x16.png">
     <link rel="stylesheet" href="../static/css/style.css">
-    <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.stock.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
+  
     
 </head>
 
@@ -18,9 +17,7 @@
     <h1>Stock Market Dashboard</h1>
     
     <button id="toggle">Switch Mode</button>
-    
 
-    
         <select id="ticker-select1">
             <option value="XOM">Exxon</option>
             <option value="CVX">Chevron</option>
@@ -42,7 +39,6 @@
             <option value="META">S&P 500</option>
         </select>   
 
-
         <select id="ticker-select2">
             <option value="XOM">Exxon</option>
             <option value="CVX">Chevron</option>
@@ -63,9 +59,8 @@
             <option value="GOOG">Google</option>
             <option value="META">S&P 500</option>
         </select>  
-        <div id="plotly-graph">
-            <strong>Plotly-Graph</strong>
-        </div>
+        <div id="plotly-graph" class="container"><strong>Plotly-Graph</strong></div>
+        <div id="view-2" class="container">Candlestick</div>
    
    
     <script src="../static/js/script.js"></script>

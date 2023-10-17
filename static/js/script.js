@@ -40,8 +40,103 @@ document.addEventListener("DOMContentLoaded", function () {
           y: data2.map(row => row.Open),
           name: ticker2
         }];
+
+        var layoutLine = {
+          title: 'Custom Range',
+          xaxis: {
+            range: ["2018-10-01", "2022-12-31"],
+            rangeselector: {buttons: [
+              {
+                count: 1,
+                label: '1m',
+                step: 'month',
+                stepmode: 'backward'
+              },
+              {
+                count: 6,
+                label: '6m',
+                step: 'month',
+                stepmode: 'backward'
+              },
+              {step: 'all'}
+            ]},
+            type: 'Date'
+          },
+          yaxis: {
+            autorange: true,
+           
+            type: 'linear'
+          }
+        };
+
+        let  traces2 = 
+          [
+            {
+          x: [data1.map(row => row.Date)],
+          close : [data1.map(row => row.Close)],
+          high : [data1.map(row => row.High)],
+          low : [data1.map(row => row.Low)],
+          open : [data1.map(row => row.Open)],
+          
+          // cutomise colors
+          increasing: {line: {color: 'black'}},
+          decreasing: {line: {color: 'red'}},
+          type : 'candlestick',
+          xaxis : 'x',
+          yaxis : 'y'
+        },
+        {
+          x: [data2.map(row => row.Date)],
+          close : [data2.map(row => row.Close)],
+          high : [data2.map(row => row.High)],
+          low : [data2.map(row => row.Low)],
+          open : [data2.map(row => row.Open)],
+          
+          // cutomise colors
+          increasing: {line: {color: 'black'}},
+          decreasing: {line: {color: 'red'}},
+          type : 'candlestick',
+          xaxis : 'x',
+          yaxis : 'y'
+        }
+      ]
+      var trace2 = [traces2] 
+       
         
-        Plotly.newPlot('plotly-graph', traces);
+        var layout = {
+          margin :{
+            r: 10, 
+            t: 25, 
+            b: 40, 
+            l: 60
+          },
+          xaxis : {
+            autorange: true,
+            type : "date",
+            title : "Date",
+            range : ["2018-10-01", "2022-12-31"],
+            rangeselector: {buttons: [
+              {
+                count: 1,
+                label: '1m',
+                step: 'month',
+                stepmode: 'backward'
+              },
+              {
+                count: 6,
+                label: '6m',
+                step: 'month',
+                stepmode: 'backward'
+              },
+              {step: 'all'}
+            ]},
+          },
+          yaxis : {
+            autorange: true
+          }
+        }
+        Plotly.newPlot('plotly-graph', traces, layoutLine);
+        Plotly.newPlot('view-2', trace2, layout);
 
         // just to check if data is being fetched
         // console.log(data.map(row => row.Date));

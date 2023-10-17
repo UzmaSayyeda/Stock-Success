@@ -7,7 +7,7 @@
 
 .dark-theme{
     --primary-color: #000106;
-    --secondary-color : #fff;
+    --secondary-color : #B4B4B3;
 }
 
 body{
@@ -32,6 +32,11 @@ h1 {
     color: var(--secondary-color);
     font-size: 20px;
     height: 500px;
+}
+
+#view-2{
+    height: 500px;
+    color: var(--secondary-color);
 }
 
 #toggle{
