@@ -1,3 +1,65 @@
+/* .toggle input[type='checkbox'] {
+    display: none;
+}
+
+.toggle label {
+    background-color: #777;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    width: 20px;
+    height: 20px;
+}
+.toggle label::after {
+    
+    border-radius: 50%;
+    content: ' ';
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+    width: 20px;
+    height: 20px;
+}
+
+.toggle input[type='checkbox']:checked ~ label {
+    background-color:darkgray;
+    border-color: gray;
+}
+
+/* .toggle input[type='checkbox']:checked ~ label::after {
+    background-color: darkgray;
+    
+} */
+/* body {
+    background-color: #f5f7fa;
+}
+body.dark-theme {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+} */ */
+
+.darkToggle {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid #555;
+  }
+  
+  .darkToggle:checked {
+    background: #333;
+  }
+  
+  .dark {
+    color: white;
+    background: #444;
+}
+
 h1 {
     display: block;
     font-family: Helvetica;

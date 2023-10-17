@@ -8,20 +8,17 @@
     <title>Stock Market Dashboard</title>
     <link rel="shortcut icon" type="image/png" href="../images/favicon-16x16.png">
     <link rel="stylesheet" href="../static/css/style.css">
+    <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.stock.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     
 </head>
 
-
-
-
-
-
-
-<body>
-
-    
-
+<body class="dark-mode">
+    <div class="toggle">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+    </div>
     <select id="ticker-select1">
         <option value="XOM">Exxon</option>
         <option value="CVX">Chevron</option>
@@ -65,24 +62,14 @@
         <option value="META">S&P 500</option>
     </select>  
 
-
-
-
     <script src="../static/js/script.js"></script>
-
     <h1>Stock Market Dashboard</h1>
-    <div id="plotly-graph" style="height: 500px;"></div>
+    <div id="plotly-graph" style="height: 500px;">plotly-graph</div>
+    <div id = "my-graph">additional graph</div>
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/billboard.js/3.9.3/billboard.min.js" integrity="sha512-49w0zJd/adscfPneCOIvfqxjg+AceoQrVhBJ4Cr0nzuteygZa6Q0OqWGDvtN9L9mehO4X+FoSPVFxnqMN7ELnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     
-
-
-
-
-
 </body>
-
-
-
-
 
 </html>
