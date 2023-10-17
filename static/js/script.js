@@ -1,41 +1,72 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
+  /// to populate dropdown menu 
+  var selectElement1 = document.getElementById('ticker-select1');
+  var selectElement2 = document.getElementById('ticker-select2');
 
-  var selectElemnt = document.getElementById('ticker-select');
-  selectElemnt.addEventListener('change', function () {
 
-    
-    let ticker = this.value;
-    fetch(`/api/data/${ticker}`)
+  /// fetch from tickers
+  selectElement1.addEventListener('change', updateGraph);
+  selectElement2.addEventListener('change', updateGraph); 
+
+
+  /// function to update graph
+  function updateGraph() {
+
+    let ticker1 = selectElement1.value;
+    let ticker2 = selectElement2.value; 
+
+    /// fetch from first ticker
+    fetch(`/api/data/${ticker1}`)
     .then(response => response.json())
-    .then(data => {
+    .then(data1 => {
+
+      /// then fetch from second ticker
+      fetch(`/api/data/${ticker2}`)
+      .then(response => response.json())
+      .then(data2 => {
+        
+
+        /// defining traces for graph as an array of dictionaries
+        const traces = [
+          {
+          x: data1.map(row => row.Date),
+          y: data1.map(row => row.Open),
+          name: ticker1
+        },
+        {
+          x: data2.map(row => row.Date),
+          y: data2.map(row => row.Open),
+          name: ticker2
+        }];
+        
+        
+        
+        Plotly.newPlot('plotly-graph', traces);
+        console.log('Graph created');
+
+        /// just to check if data is being fetched
+        // console.log(data.map(row => row.Date));
+        // console.log(data.map(row => row.Open));
 
 
-      const traces = [{
-        x: data.map(row => row.Date),
-        y: data.map(row => row.Open),
-        name: ticker
-      }];
 
 
-      console.log(data.map(row => row.Date));
-      console.log(data.map(row => row.Open));
-
-      Plotly.newPlot('plotly-graph', traces);
-      console.log('Graph created');
+        
 
 
+      })
+      .catch(error => console.error('Error:', error));
     })
     .catch(error => console.error('Error:', error));
+  };
 
-
-
-
-  });
-
+  /// to update graph when page is loaded
   var event = new Event('change');
-  selectElemnt.dispatchEvent(event);
+  selectElement1.dispatchEvent(event);
+  selectElement2.dispatchEvent(event);
+
 
 
 
