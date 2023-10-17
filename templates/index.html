@@ -14,58 +14,61 @@
     
 </head>
 
-<body class="dark-mode">
-    <div class="toggle">
-        <input type="checkbox" id="toggle" />
-        <label for="toggle"></label>
-    </div>
-    <select id="ticker-select1">
-        <option value="XOM">Exxon</option>
-        <option value="CVX">Chevron</option>
-        <option value="SHW">Sherwin-Williams</option>
-        <option value="DD">DuPont de Nemours</option>
-        <option value="UPS">United Parcel Service</option>
-        <option value="RTX">Rtx Corp</option>
-        <option value="DUK">Duke Energy</option>
-        <option value="ED">Consolidated Edison</option>
-        <option value="JNJ">Johnson & Johnson</option>
-        <option value="PFE">Pfizer</option>
-        <option value="AMZN">Amazon</option>
-        <option value="MCD">McDonald's</option>
-        <option value="KO">Coca-Cola</option>
-        <option value="PG">Procter & Gamble</option>
-        <option value="AAPL">Apple</option>
-        <option value="MSFT">Microsoft</option>
-        <option value="GOOG">Google</option>
-        <option value="META">S&P 500</option>
-    </select>   
-
-
-    <select id="ticker-select2">
-        <option value="XOM">Exxon</option>
-        <option value="CVX">Chevron</option>
-        <option value="SHW">Sherwin-Williams</option>
-        <option value="DD">DuPont de Nemours</option>
-        <option value="UPS">United Parcel Service</option>
-        <option value="RTX">Rtx Corp</option>
-        <option value="DUK">Duke Energy</option>
-        <option value="ED">Consolidated Edison</option>
-        <option value="JNJ">Johnson & Johnson</option>
-        <option value="PFE">Pfizer</option>
-        <option value="AMZN">Amazon</option>
-        <option value="MCD">McDonald's</option>
-        <option value="KO">Coca-Cola</option>
-        <option value="PG">Procter & Gamble</option>
-        <option value="AAPL">Apple</option>
-        <option value="MSFT">Microsoft</option>
-        <option value="GOOG">Google</option>
-        <option value="META">S&P 500</option>
-    </select>  
-
-    <script src="../static/js/script.js"></script>
+<body>
     <h1>Stock Market Dashboard</h1>
-    <div id="plotly-graph" style="height: 500px;">plotly-graph</div>
-    <div id = "my-graph">additional graph</div>
+    
+    <button id="toggle">Switch Mode</button>
+    
+
+    
+        <select id="ticker-select1">
+            <option value="XOM">Exxon</option>
+            <option value="CVX">Chevron</option>
+            <option value="SHW">Sherwin-Williams</option>
+            <option value="DD">DuPont de Nemours</option>
+            <option value="UPS">United Parcel Service</option>
+            <option value="RTX">Rtx Corp</option>
+            <option value="DUK">Duke Energy</option>
+            <option value="ED">Consolidated Edison</option>
+            <option value="JNJ">Johnson & Johnson</option>
+            <option value="PFE">Pfizer</option>
+            <option value="AMZN">Amazon</option>
+            <option value="MCD">McDonald's</option>
+            <option value="KO">Coca-Cola</option>
+            <option value="PG">Procter & Gamble</option>
+            <option value="AAPL">Apple</option>
+            <option value="MSFT">Microsoft</option>
+            <option value="GOOG">Google</option>
+            <option value="META">S&P 500</option>
+        </select>   
+
+
+        <select id="ticker-select2">
+            <option value="XOM">Exxon</option>
+            <option value="CVX">Chevron</option>
+            <option value="SHW">Sherwin-Williams</option>
+            <option value="DD">DuPont de Nemours</option>
+            <option value="UPS">United Parcel Service</option>
+            <option value="RTX">Rtx Corp</option>
+            <option value="DUK">Duke Energy</option>
+            <option value="ED">Consolidated Edison</option>
+            <option value="JNJ">Johnson & Johnson</option>
+            <option value="PFE">Pfizer</option>
+            <option value="AMZN">Amazon</option>
+            <option value="MCD">McDonald's</option>
+            <option value="KO">Coca-Cola</option>
+            <option value="PG">Procter & Gamble</option>
+            <option value="AAPL">Apple</option>
+            <option value="MSFT">Microsoft</option>
+            <option value="GOOG">Google</option>
+            <option value="META">S&P 500</option>
+        </select>  
+        <div id="plotly-graph">
+            <strong>Plotly-Graph</strong>
+        </div>
+   
+   
+    <script src="../static/js/script.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/billboard.js/3.9.3/billboard.min.js" integrity="sha512-49w0zJd/adscfPneCOIvfqxjg+AceoQrVhBJ4Cr0nzuteygZa6Q0OqWGDvtN9L9mehO4X+FoSPVFxnqMN7ELnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->

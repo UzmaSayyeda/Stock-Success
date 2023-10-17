@@ -85,39 +85,12 @@ document.addEventListener("DOMContentLoaded", function () {
 //   .catch(error => console.error('Error:', error));
 // });
 
-/**  Highcharts.chart('my-graph',{
-          title: {
-            text : 'some title'
-          },
-          yAxis : {
-            title: {
-              text : "yaxis"
-            }
-          },
-          xAxis : {
-            accessibilty:{
-              rangeDescription : "Range : 2018 to 2023"
-            }
-          },
-          series : [{
-            data : data1.map(row => row.Date)
-          },{
-            data : data1.map(row => row.Open)
-          }]
-        })
-        */
-        const toggle = document.getElementById('toggle');
-        const body = document.body;
-        
-        toggle.addEventListener('input', e => {
 
-          document.body.classList.toggle('dark')
-            // const isChecked = e.target.checked;
-        
-            // if (isChecked) {
-            //     body.classList.add('dark-theme');
-            // } else {
-            //
-            // }
-            body.classList.remove('dark-theme');
-            });
+
+// switch between modes
+
+var toggle = document.getElementById('toggle');
+
+toggle.onclick = function(){
+  document.body.classList.toggle("dark-theme");
+}
