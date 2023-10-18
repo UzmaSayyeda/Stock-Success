@@ -3,16 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
   /// to populate dropdown menu 
   var selectElement1 = document.getElementById('ticker-select1');
   var selectElement2 = document.getElementById('ticker-select2');
-
+  var selectChart = document.getElementById('user-input')
   /// fetch from tickers
   selectElement1.addEventListener('change', updateGraph);
   selectElement2.addEventListener('change', updateGraph); 
+  // selectChart.addEventListener('change')
 
   /// function to update graph
   function updateGraph() {
 
     let ticker1 = selectElement1.value;
-    let ticker2 = selectElement2.value; 
+    let ticker2 = selectElement2.value;
+
 
     /// fetch from first ticker
     fetch(`/api/data/${ticker1}`)
@@ -225,15 +227,19 @@ document.addEventListener("DOMContentLoaded", function () {
         autorange: true
       }
     }
+       // display graphs.
+   
+    Plotly.newPlot('view-1', traces, layoutLine,config);
+    Plotly.newPlot('view-2', traces2, layoutView2, config);
+    Plotly.newPlot('view-3', traces3, layoutView3,config)
 
+  
 
 
 
       
-        // display graphs.
-        Plotly.newPlot('plotly-graph', traces, layoutLine,config);
-        Plotly.newPlot('view-2', traces2, layoutView2, config);
-        Plotly.newPlot('view-3', traces3, layoutView3,config);
+       
+      ;
 
 
         
@@ -250,6 +256,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // var event = new Event('change');
   selectElement1.dispatchEvent(new Event('change'));
   selectElement2.dispatchEvent(new Event('change'))
+  // selectChart.dispatchEvent(new Event ('change'))
+
 
 });
 
@@ -292,4 +300,41 @@ toggle.onclick = function(){
 
 //-----------------------------------------------//
 
+// anime.js
+
+let solid = document.querySelector('.block-overlay');
+let content = document.querySelector('.block-content');
+let container = document.querySelector('#container');
+
+const blockReveal = (solid, content, container) => {
+    let blockHeight = content.clientHeight;
+    let blockWidth = content.clientWidth;
+    solid.style.height = blockHeight + 'px';
+    container.style.width = blockWidth + 'px';
+    // Animate initial color
+    const solidAnimation = () => {
+        let tl = anime.timeline({
+            easing: 'easeInOutQuad',
+            duration: 1000
+        });
+        // Add steps
+        tl
+            .add({
+                targets: solid,
+                width: blockWidth,
+                complete: function (tl) {
+                    // Add float right and background                                content
+                    solid.style.right = "0";
+                    content.style.opacity = "1";
+                }
+            })
+            .add({
+                targets: solid,
+                width: '0'
+            });
+    }
+    solidAnimation();
+};
+
+blockReveal(solid, content, container);
 

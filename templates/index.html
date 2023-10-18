@@ -8,14 +8,22 @@
     <title>Stock Market Dashboard</title>
     <link rel="shortcut icon" type="image/png" href="../images/favicon-16x16.png">
     <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   
     
   
     
 </head>
 
 <body>
-    <h1>Stock Market Dashboard</h1>
+    <div id ="header" >
+        <div class="header-text">
+            <h1>Stock Market Dashboard</h1>
+        </div>
+        <div class="block-overlay"></div>
+    </div>
+    
     <button id="toggle">Switch Mode</button>
         <select id="ticker-select1">
             <option value="XOM">Exxon</option>
@@ -58,14 +66,22 @@
             <option value="GOOG">Google</option>
             <option value="META">S&P 500</option>
         </select>  
-        <div id="plotly-graph" class="container">Plotly-Graph</div>
-        <div id="view-2" class="container">Candlestick</div>
-        <div id = "view-3" class="container">WaterFall</div>
+        <!-- <select id = "user-input">
+            <option value="linechart">1</option>
+            <option value="candlestick">2</option>
+            <option value="holc">3</option>
+        </select> -->
+        <div id="view-1" class="container"></div>
+        <div id="view-2" class="container"></div>
+        <div id = "view-3" class="container"></div>
    
    
     <script src="../static/js/script.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ 
+
+ 
    
     
 </body>
