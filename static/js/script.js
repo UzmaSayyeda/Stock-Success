@@ -78,13 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // fetching data for candlestick graph
         let  traces2 = 
+        //var traces2 = 
           [
             {
-          x: [data1.map(row => row.Date)],
-          close : [data1.map(row => row.Close)],
-          high : [data1.map(row => row.High)],
-          low : [data1.map(row => row.Low)],
-          open : [data1.map(row => row.Open)],
+          x: data1.map(row => row.Date),
+          close : data1.map(row => row.Close),
+          high : data1.map(row => row.High),
+          low : data1.map(row => row.Low),
+          open : data1.map(row => row.Open),
           
           // customize colors
           increasing: {line: {color: 'black'}},
@@ -94,11 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
           yaxis : 'y'
         },
         {
-          x: [data2.map(row => row.Date)],
-          close : [data2.map(row => row.Close)],
-          high : [data2.map(row => row.High)],
-          low : [data2.map(row => row.Low)],
-          open : [data2.map(row => row.Open)],
+          x: data2.map(row => row.Date),
+          close : data2.map(row => row.Close),
+          high : data2.map(row => row.High),
+          low : data2.map(row => row.Low),
+          open : data2.map(row => row.Open),
           
           // customize colors
           increasing: {line: {color: 'black'}},
