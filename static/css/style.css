@@ -1,12 +1,74 @@
+
+:root{
+    --primary-color: #fff;
+    --secondary-color : orangered
+;
+}
+
+.dark-theme{
+    --primary-color: #000106;
+    --secondary-color : #B4B4B3;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+
 h1 {
-    display: block;
+    /* display: block; */
     font-family: Helvetica;
+    padding: 30px;
     text-align: center;
     font-size: 50px;
-    border: solid;
-    color: black;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+   
+}
+
+.container{
+    color: var(--secondary-color);
+    font-size: 20px;
+    height: 500px;
+}
+
+
+
+#toggle{
+    width: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    border-radius: 5%;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    float: right;
+    margin-bottom: 10px;
+}
+
+#ticker-select1{
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0.5em 3.5em 0.5em 1em;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+#ticker-select2{
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0.5em 3.5em 0.5em 1em;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin-bottom: 10px;
 }
