@@ -1,8 +1,7 @@
 
 :root{
     --primary-color: #fff;
-    --secondary-color : orangered
-;
+    --secondary-color : orangered;
 }
 
 .dark-theme{
@@ -15,21 +14,24 @@ body{
 }
 
 
-h1 {
-    /* display: block; */
+#header {
+    display: block; 
     font-family: Helvetica;
-    padding: 30px;
+   
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
    
-}
+} 
+
 
 .container{
     color: var(--secondary-color);
     font-size: 20px;
     height: 500px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 

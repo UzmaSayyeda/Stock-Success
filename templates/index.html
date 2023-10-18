@@ -9,15 +9,17 @@
     <link rel="shortcut icon" type="image/png" href="../images/favicon-16x16.png">
     <link rel="stylesheet" href="../static/css/style.css">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+   
+    
   
     
 </head>
 
 <body>
-    <h1>Stock Market Dashboard</h1>
-    
+   
+    <span id="header"></span>
     <button id="toggle">Switch Mode</button>
-
         <select id="ticker-select1">
             <option value="XOM">Exxon</option>
             <option value="CVX">Chevron</option>
@@ -59,15 +61,23 @@
             <option value="GOOG">Google</option>
             <option value="META">S&P 500</option>
         </select>  
-        <div id="plotly-graph" class="container">Plotly-Graph</div>
-        <div id="view-2" class="container">Candlestick</div>
-        <div id = "view-3" class="container">WaterFall</div>
+        <!-- <select id = "user-input">
+            <option value="linechart">1</option>
+            <option value="candlestick">2</option>
+            <option value="holc">3</option>
+        </select> -->
+        <div id="view-1" class="container"></div>
+        <div id="view-2" class="container"></div>
+        <div id = "view-3" class="container"></div>
    
    
     <script src="../static/js/script.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/billboard.js/3.9.3/billboard.min.js" integrity="sha512-49w0zJd/adscfPneCOIvfqxjg+AceoQrVhBJ4Cr0nzuteygZa6Q0OqWGDvtN9L9mehO4X+FoSPVFxnqMN7ELnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+ 
+
+ 
+   
     
 </body>
 
