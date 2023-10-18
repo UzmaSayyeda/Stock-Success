@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => response.json())
       .then(data2 => {
       
+        // plotly line/time series graph
        // defining traces for graph as an array of dictionaries
         const traces = [
           {
@@ -40,9 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
           y: data2.map(row => row.Open),
           name: ticker2
         }];
-
+  //--------------------------------------------------------------------------------//
+        // layout for time series / line plot
         var layoutLine = {
-          title: 'Custom Range',
+          
+          
+          title: 'Time Series',
           xaxis: {
             range: ["2018-10-01", "2022-12-31"],
             rangeselector: {buttons: [
@@ -68,7 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
             type: 'linear'
           }
         };
+        var config = {responsive: true}
+/**-------------------------------------------------------------------
+ --------------------------------------------------------------------- */
 
+        // fetching data for candlestick graph
         let  traces2 = 
           [
             {
@@ -78,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
           low : [data1.map(row => row.Low)],
           open : [data1.map(row => row.Open)],
           
-          // cutomise colors
+          // customize colors
           increasing: {line: {color: 'black'}},
           decreasing: {line: {color: 'red'}},
           type : 'candlestick',
@@ -92,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
           low : [data2.map(row => row.Low)],
           open : [data2.map(row => row.Open)],
           
-          // cutomise colors
+          // customize colors
           increasing: {line: {color: 'black'}},
           decreasing: {line: {color: 'red'}},
           type : 'candlestick',
@@ -100,10 +108,12 @@ document.addEventListener("DOMContentLoaded", function () {
           yaxis : 'y'
         }
       ]
-      var trace2 = [traces2] 
-       
-        
-        var layout = {
+      
+     
+      //--------------------------------------------------------------------------------//
+        // layout for candle stick graph.
+        var layoutView2 = {
+         
           margin :{
             r: 10, 
             t: 25, 
@@ -135,8 +145,24 @@ document.addEventListener("DOMContentLoaded", function () {
             autorange: true
           }
         }
-        Plotly.newPlot('plotly-graph', traces, layoutLine);
-        Plotly.newPlot('view-2', trace2, layout);
+/**-------------------------------------------------------------------
+ --------------------------------------------------------------------- */
+
+
+      // view -3 plot
+
+      let data3 = [
+        {
+          z : [[data1], [data2]],
+          type : 'heatmap'
+        }
+      ]
+
+        // display graphs.
+        Plotly.newPlot('plotly-graph', traces, layoutLine,config);
+        Plotly.newPlot('view-2', traces2, layoutView2, config);
+        Plotly.newPlot('view-3', data3, config);
+        
 
         // just to check if data is being fetched
         // console.log(data.map(row => row.Date));
