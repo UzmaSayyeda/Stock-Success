@@ -8,8 +8,8 @@
     <title>Stock Market Dashboard</title>
     <link rel="shortcut icon" type="image/png" href="../images/favicon-16x16.png">
     <link rel="stylesheet" href="../static/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
    
     
   
@@ -17,13 +17,8 @@
 </head>
 
 <body>
-    <div id ="header" >
-        <div class="header-text">
-            <h1>Stock Market Dashboard</h1>
-        </div>
-        <div class="block-overlay"></div>
-    </div>
-    
+   
+    <span id="header"></span>
     <button id="toggle">Switch Mode</button>
         <select id="ticker-select1">
             <option value="XOM">Exxon</option>

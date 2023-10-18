@@ -302,39 +302,14 @@ toggle.onclick = function(){
 
 // anime.js
 
-let solid = document.querySelector('.block-overlay');
-let content = document.querySelector('.block-content');
-let container = document.querySelector('#container');
+var typed = new Typed('#header', {
+  strings:['<h1>Stock Market Dashboard</h1>'],
+  typeSpeed : 60,
+  backSpeed : 20,
+  backDelay : 500,
+  contentType : 'html',
+  loop : true,
+  loopCount: 5,
 
-const blockReveal = (solid, content, container) => {
-    let blockHeight = content.clientHeight;
-    let blockWidth = content.clientWidth;
-    solid.style.height = blockHeight + 'px';
-    container.style.width = blockWidth + 'px';
-    // Animate initial color
-    const solidAnimation = () => {
-        let tl = anime.timeline({
-            easing: 'easeInOutQuad',
-            duration: 1000
-        });
-        // Add steps
-        tl
-            .add({
-                targets: solid,
-                width: blockWidth,
-                complete: function (tl) {
-                    // Add float right and background                                content
-                    solid.style.right = "0";
-                    content.style.opacity = "1";
-                }
-            })
-            .add({
-                targets: solid,
-                width: '0'
-            });
-    }
-    solidAnimation();
-};
-
-blockReveal(solid, content, container);
+})
 
