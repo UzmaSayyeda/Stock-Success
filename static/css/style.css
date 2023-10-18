@@ -1,8 +1,7 @@
 
 :root{
     --primary-color: #fff;
-    --secondary-color : orangered
-;
+    --secondary-color : orangered;
 }
 
 .dark-theme{
@@ -30,6 +29,8 @@ h1 {
     color: var(--secondary-color);
     font-size: 20px;
     height: 500px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 

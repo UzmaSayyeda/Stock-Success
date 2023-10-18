@@ -1,16 +1,12 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-
-
   /// to populate dropdown menu 
   var selectElement1 = document.getElementById('ticker-select1');
   var selectElement2 = document.getElementById('ticker-select2');
 
-
   /// fetch from tickers
   selectElement1.addEventListener('change', updateGraph);
   selectElement2.addEventListener('change', updateGraph); 
-
 
   /// function to update graph
   function updateGraph() {
@@ -27,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch(`/api/data/${ticker2}`)
       .then(response => response.json())
       .then(data2 => {
-      
+  
         // plotly line/time series graph
        // defining traces for graph as an array of dictionaries
         const traces = [
@@ -41,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
           y: data2.map(row => row.Open),
           name: ticker2
         }];
+        
   //--------------------------------------------------------------------------------//
         // layout for time series / line plot
         var layoutLine = {
@@ -73,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         };
         var config = {responsive: true}
+        
 /**-------------------------------------------------------------------
  --------------------------------------------------------------------- */
 
@@ -80,34 +78,35 @@ document.addEventListener("DOMContentLoaded", function () {
         let  traces2 = 
           [
             {
-          x: [data1.map(row => row.Date)],
-          close : [data1.map(row => row.Close)],
-          high : [data1.map(row => row.High)],
-          low : [data1.map(row => row.Low)],
-          open : [data1.map(row => row.Open)],
+          x: data1.map(row => row.Date),
+          close : data1.map(row => row.Close),
+          high : data1.map(row => row.High),
+          low : data1.map(row => row.Low),
+          open : data1.map(row => row.Open),
           
           // customize colors
-          increasing: {line: {color: 'black'}},
-          decreasing: {line: {color: 'red'}},
+          increasing: {line: {color: '#2279b5'}},
+          decreasing: {line: {color: '#ff7f0e'}},
           type : 'candlestick',
           xaxis : 'x',
           yaxis : 'y'
         },
         {
-          x: [data2.map(row => row.Date)],
-          close : [data2.map(row => row.Close)],
-          high : [data2.map(row => row.High)],
-          low : [data2.map(row => row.Low)],
-          open : [data2.map(row => row.Open)],
+          x: data2.map(row => row.Date),
+          close : data2.map(row => row.Close),
+          high : data2.map(row => row.High),
+          low : data2.map(row => row.Low),
+          open : data2.map(row => row.Open),
           
           // customize colors
-          increasing: {line: {color: 'black'}},
-          decreasing: {line: {color: 'red'}},
+          increasing: {line: {color: '#2279b5'}},
+          decreasing: {line: {color: '#ff7f0e'}},
           type : 'candlestick',
           xaxis : 'x',
           yaxis : 'y'
         }
       ]
+      // console.log(high)
       
      
       //--------------------------------------------------------------------------------//
@@ -120,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
             b: 40, 
             l: 60
           },
+          title : "Candle stick",
           xaxis : {
             autorange: true,
             type : "date",
@@ -145,23 +145,97 @@ document.addEventListener("DOMContentLoaded", function () {
             autorange: true
           }
         }
+       
 /**-------------------------------------------------------------------
  --------------------------------------------------------------------- */
 
 
       // view -3 plot
 
-      let data3 = [
-        {
-          z : [[data1], [data2]],
-          type : 'heatmap'
-        }
-      ]
+      // let data3 = [
+      //   {
+      //     z : [[data1], [data2]],
+      //     type : 'heatmap'
+      //   }
+      // ]
 
+      let  traces3 = 
+      [
+        {
+        x: data1.map(row => row.Date),
+        close : data1.map(row => row.Close),
+        high : data1.map(row => row.High),
+        low : data1.map(row => row.Low),
+        open : data1.map(row => row.Open),
+        
+        // customize colors
+        increasing: {line: {color: '#2279b5'}},
+        decreasing: {line: {color: '#ff7f0e'}},
+        type : 'ohlc',
+        xaxis : 'x',
+        yaxis : 'y'
+      },
+      {
+        x: data2.map(row => row.Date),
+        close : data2.map(row => row.Close),
+        high : data2.map(row => row.High),
+        low : data2.map(row => row.Low),
+        open : data2.map(row => row.Open),
+        
+        // customize colors
+        increasing: {line: {color: '#2279b5'}},
+        decreasing: {line: {color: '#ff7f0e'}},
+        type : 'ohlc',
+        xaxis : 'x',
+        yaxis : 'y'
+      }
+    ]
+
+    var layoutView3 = {
+         
+      margin :{
+        r: 10, 
+        t: 25, 
+        b: 40, 
+        l: 60
+      },
+      title : "OHLC",
+      xaxis : {
+        autorange: true,
+       type : "date",
+        title : "Date",
+       
+        rangeselector: {buttons: [
+          {
+            count: 1,
+            label: '1m',
+            step: 'month',
+            stepmode: 'backward'
+          },
+          {
+            count: 6,
+            label: '6m',
+            step: 'month',
+            stepmode: 'backward'
+          },
+          {step: 'all'}
+        ]},
+      },
+      yaxis : {
+        autorange: true
+      }
+    }
+
+
+
+
+      
         // display graphs.
         Plotly.newPlot('plotly-graph', traces, layoutLine,config);
         Plotly.newPlot('view-2', traces2, layoutView2, config);
-        Plotly.newPlot('view-3', data3, config);
+        Plotly.newPlot('view-3', traces3, layoutView3,config);
+
+
         
 
         // just to check if data is being fetched
@@ -215,3 +289,7 @@ var toggle = document.getElementById('toggle');
 toggle.onclick = function(){
   document.body.classList.toggle("dark-theme");
 }
+
+//-----------------------------------------------//
+
+
