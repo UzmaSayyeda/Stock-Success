@@ -1,29 +1,301 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetch('/api/data')
-        .then(response => response.json())
-        .then(data => {
-            // Extracting data for Plotly
-            var Dates = [...new Set(data.map(d => d[0]))]; // Get unique 
 
-            var Volume = dates.map(c => {
-                // Get the last value of pm10 for a city
-                var datesData = data.filter(d => d[0] === d);
-                return datesData.length ? datesData[0][1] : null;
-            });
+document.addEventListener("DOMContentLoaded", function () 
+{
+  /// to populate dropdown menu 
+  var selectElement1 = document.getElementById('ticker-select1');
+  var selectElement2 = document.getElementById('ticker-select2');
+  var selectChart = document.getElementById('user-input')
+  /// fetch from tickers
+  selectElement1.addEventListener('change', updateGraph);
+  selectElement2.addEventListener('change', updateGraph);
+  // selectChart.addEventListener('change')
 
-            // Creating Plotly chart
+  /// function to update graph
+  function updateGraph() {
+
+    let ticker1 = selectElement1.value;
+    let ticker2 = selectElement2.value;
+
+
+    /// fetch from first ticker
+    fetch(`/api/data/${ticker1}`).then(response => response.json()).then(data1 => {
+      
+      /// then fetch from second ticker
+      fetch(`/api/data/${ticker2}`).then(response => response.json()).then(data2 =>{
+
+
+
+
+        // plotly line/time series graph
+        // defining traces for graph as an array of dictionaries
+        const traces = [
+          {
+            x: data1.map(row => row.Date),
+            y: data1.map(row => row.Open),
+            name: ticker1
+          },
+          {
+           x: data2.map(row => row.Date),
+           y: data2.map(row => row.Open),
+           name: ticker2
+          }
+        ];
+        
+        
+        
+          /**--------------------------------------------------------------------------------------------------------------------------------------- **/
           
-            var trace1 = {
-                type: 'bar',
-                x: Dates,
-                y: Volume,
-                name: 'test'
-            };
-            var layout = {
-                title: 'High test price',
-                barmode: 'group'
-            };
-            Plotly.newPlot('plotly-graph', [trace1], layout);
-        })
-        .catch(error => console.error('Error:', error));
+
+
+
+          // layout for time series / line plot
+          var layoutLine = {
+            title: 'Time Series',
+
+            xaxis: {
+
+              range: ["2018-10-01", "2022-12-31"],
+              rangeselector: {
+
+                buttons: [
+                  {
+                    count: 1,
+                    label: '1m',
+                    step: 'month',
+                    stepmode: 'backward'
+                  },
+                  {
+                    count: 6,
+                    label: '6m',
+                    step: 'month',
+                    stepmode: 'backward'
+                  },
+                  { step: 'all',
+                  label: 'All dates'}
+                ]
+              },
+
+              type: 'Date'
+            },
+            
+            yaxis: {
+              autorange: true,
+              type: 'linear'
+            }
+          };
+          
+          
+          /**--------------------------------------------------------------------------------------------------------------------------------------- **/
+          
+          var config = { responsive: true }
+          
+          // fetching data for candlestick graph
+          
+          let traces2 =[
+            
+            {
+              x: data1.map(row => row.Date),
+              close: data1.map(row => row.Close),
+              high: data1.map(row => row.High),
+              low: data1.map(row => row.Low),
+              open: data1.map(row => row.Open),
+              name: ticker1,
+                
+              // customize colors
+              increasing: { line: { color: '#2279b5' } },
+              decreasing: { line: { color: '#ff7f0e' } },
+              type: 'candlestick',
+              xaxis: 'x',
+              yaxis: 'y'
+            },
+            {
+              x: data2.map(row => row.Date),
+              close: data2.map(row => row.Close),
+              high: data2.map(row => row.High),
+              low: data2.map(row => row.Low),
+              open: data2.map(row => row.Open),
+              name: ticker2,
+                
+              // customize colors
+                
+              increasing: { line: { color: '#2279b5' } },
+              decreasing: { line: { color: '#ff7f0e' } },
+              type: 'candlestick',
+              xaxis: 'x',
+              yaxis: 'y'
+            }
+          ]
+          
+          // console.log(high)
+          
+          /**---------------------------------------------------------------------------------------------------------------------------------------**/
+          
+          // layout for candle stick graph.
+          
+          var layoutView2 = {
+            
+            margin: 
+            {
+              r: 10,
+              t: 25,
+              b: 40,
+              l: 60
+            },
+            
+            title: "Candle stick",
+            xaxis:
+            {
+              autorange: true,
+              type: "date",
+              title: "Date",
+              range: ["2018-10-01", "2022-12-31"],
+              rangeselector:
+              {
+                buttons: [
+                  {
+                    count: 1,
+                    label: '1m',
+                    step: 'month',
+                    stepmode: 'backward'
+                  },
+                  {
+                    count: 6,
+                    label: '6m',
+                    step: 'month',
+                    stepmode: 'backward'
+                  },
+                  { step: 'all',
+                  label: 'All dates'}
+                ]
+              },
+            },
+            yaxis: {
+              autorange: true
+            }
+          }
+          
+          /**---------------------------------------------------------------------------------------------------------------------------------------- */
+          // view -3 plot
+          // let data3 = [
+          //   {
+          //     z : [[data1], [data2]],
+          //     type : 'heatmap'
+          //   }
+          // ]
+          
+          let traces3 =
+          [
+            {
+              x: data1.map(row => row.Date),
+              close: data1.map(row => row.Close),
+              high: data1.map(row => row.High),
+              low: data1.map(row => row.Low),
+              open: data1.map(row => row.Open),
+              name: ticker1,
+              
+              // customize colors
+              increasing: { line: { color: '#2279b5' } },
+              decreasing: { line: { color: '#ff7f0e' } },
+              type: 'ohlc',
+              xaxis: 'x',
+              yaxis: 'y'
+            },
+            {
+              x: data2.map(row => row.Date),
+              close: data2.map(row => row.Close),
+              high: data2.map(row => row.High),
+              low: data2.map(row => row.Low),
+              open: data2.map(row => row.Open),
+              name: ticker2,
+              
+              // customize colors
+              increasing: { line: { color: '#2279b5' } },
+              decreasing: { line: { color: '#ff7f0e' } },
+              type: 'ohlc',
+              xaxis: 'x',
+              yaxis: 'y'
+            }
+          ]
+          
+          // layout for view 3
+          
+          var layoutView3 = {
+            margin: {
+              r: 10,
+              t: 25,
+              b: 40,
+              l: 60
+            },
+            title: "OHLC",
+            xaxis: {
+              autorange: true,
+              type: "date",
+              title: "Date",
+              rangeselector: {
+                buttons: [
+                  {
+                    count: 1,
+                    label: '1m',
+                    step: 'month',
+                    stepmode: 'backward'
+                  },
+                  {
+                    count: 6,
+                    label: '6m',
+                    step: 'month',
+                    stepmode: 'backward'
+                  },
+                  { step: 'all',
+                  label: 'All dates'}
+                ]
+              },
+            },
+
+
+
+            yaxis: {
+              autorange: true
+            }
+          }
+          // display graphs.
+          Plotly.newPlot('view-1', traces, layoutLine, config);
+          Plotly.newPlot('view-2', traces2, layoutView2, config);
+          Plotly.newPlot('view-3', traces3, layoutView3, config);
+          
+          // just to check if data is being fetched
+          // console.log(data.map(row => row.Date));
+          // console.log(data.map(row => row.Open));
+        }).catch(error => console.error('Error:', error));
+      })
+    };
+    
+
+    /// to update graph when page is loaded
+    // var event = new Event('change');
+    
+    selectElement1.dispatchEvent(new Event('change'));
+    selectElement2.dispatchEvent(new Event('change'));
+    
+    // selectChart.dispatchEvent(new Event ('change'))
+  
 });
+
+
+// switch between modes
+var toggle = document.getElementById('toggle');
+
+toggle.onclick = function () {
+  document.body.classList.toggle("dark-theme");
+}
+
+/**---------------------------------------------------------------------------------------------------------------------------------------- */
+// anime.js
+let animation = anime({
+  targets : '.header',
+  translateX : [-500, 0],
+  scale : [0,1],
+  delay : anime.stagger(200),
+  duration : 4000,
+  easing : 'easeInOutCirc',
+  autoplay : true
+})
