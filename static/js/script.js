@@ -43,24 +43,23 @@ document.addEventListener("DOMContentLoaded", function () {
   //--------------------------------------------------------------------------------//
         // layout for time series / line plot
         var layoutLine = {
-          
-          
+  
           title: 'Time Series',
           xaxis: {
             range: ["2018-10-01", "2022-12-31"],
             rangeselector: {buttons: [
-              {
-                count: 1,
-                label: '1m',
-                step: 'month',
-                stepmode: 'backward'
-              },
-              {
-                count: 6,
-                label: '6m',
-                step: 'month',
-                stepmode: 'backward'
-              },
+                {
+                  count: 1,
+                  label: '1m',
+                  step: 'month',
+                  stepmode: 'backward'
+                },
+                {
+                  count: 6,
+                  label: '6m',
+                  step: 'month',
+                  stepmode: 'backward'
+                },
               {step: 'all'}
             ]},
             type: 'Date'
@@ -74,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var config = {responsive: true}
         
 /**-------------------------------------------------------------------
- --------------------------------------------------------------------- */
+ --------------------------------------------------------------------- **/
 
         // fetching data for candlestick graph
         let  traces2 = 
@@ -112,27 +111,28 @@ document.addEventListener("DOMContentLoaded", function () {
       
      
       //--------------------------------------------------------------------------------//
+
         // layout for candle stick graph.
         var layoutView2 = {
          
           margin :{
-            r: 10, 
-            t: 25, 
-            b: 40, 
-            l: 60
-          },
+              r: 10, 
+              t: 25, 
+              b: 40, 
+              l: 60
+                },
           title : "Candle stick",
           xaxis : {
-            autorange: true,
-            type : "date",
-            title : "Date",
-            range : ["2018-10-01", "2022-12-31"],
-            rangeselector: {buttons: [
-              {
-                count: 1,
-                label: '1m',
-                step: 'month',
-                stepmode: 'backward'
+              autorange: true,
+              type : "date",
+              title : "Date",
+              range : ["2018-10-01", "2022-12-31"],
+              rangeselector: {buttons: [
+                {
+                  count: 1,
+                  label: '1m',
+                  step: 'month',
+                  stepmode: 'backward'
               },
               {
                 count: 6,
@@ -196,16 +196,16 @@ document.addEventListener("DOMContentLoaded", function () {
     var layoutView3 = {
          
       margin :{
-        r: 10, 
-        t: 25, 
-        b: 40, 
-        l: 60
+          r: 10, 
+          t: 25, 
+          b: 40, 
+          l: 60
       },
       title : "OHLC",
       xaxis : {
-        autorange: true,
-       type : "date",
-        title : "Date",
+          autorange: true,
+          type : "date",
+          title : "Date",
        
         rangeselector: {buttons: [
           {
@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
    
     Plotly.newPlot('view-1', traces, layoutLine,config);
     Plotly.newPlot('view-2', traces2, layoutView2, config);
-    Plotly.newPlot('view-3', traces3, layoutView3,config)
+    Plotly.newPlot('view-3', traces3, layoutView3,config);
 
   
 
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       
        
-      ;
+      
 
 
         
@@ -301,15 +301,27 @@ toggle.onclick = function(){
 //-----------------------------------------------//
 
 // anime.js
-
-var typed = new Typed('#header', {
-  strings:['<h1>Stock Market Dashboard</h1>'],
-  typeSpeed : 60,
-  backSpeed : 20,
-  backDelay : 500,
-  contentType : 'html',
-  loop : true,
-  loopCount: 5,
-
+let animation = anime({
+  targets : '.header',
+  translateX: 250,
+  delay : anime.stagger(200, {start:1000}),
+  background : "#0000FF"
+ 
 })
+
+
+
+
+
+// typed.js header animation
+// var typed = new Typed('#header', {
+//   strings:['<h1>Stock Market Dashboard</h1>'],
+//   typeSpeed : 60,
+//   backSpeed : 20,
+//   backDelay : 500,
+//   contentType : 'html',
+//   loop : true,
+//   loopCount: 5,
+
+// })
 
