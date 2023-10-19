@@ -32,28 +32,12 @@ body{
 } 
 
 
-.grid-container{
+.container{
     color: var(--secondary-color);
     font-size: 20px;
-    height: 500px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-
+    height: 100%;
+    width: 100%;
 }
-
-
-/* #toggle{
-    width: 50px;
-    padding: 5px;
-    border: none;
-    border-radius: 10%;
-    cursor: pointer;
-    border-radius: 5%;
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    float: right;
-    margin-bottom: 10px;
-} */
 
 .checkbox {
     opacity: 0;

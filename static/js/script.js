@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function ()
           }
         ];
         
-        /**--------------------------------------------------------------------------------------------------------------------------------------- **/
+        /**----------------------------------------------------------------------------------- **/
         
         // layout for time series / line plot
         var layoutLine = {
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function ()
         };
           
           
-        /**--------------------------------------------------------------------------------------------------------------------------------------- **/
+        /**----------------------------------------------------------------------------------------------- **/
           
         var config = { responsive: true }
           
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function ()
           
         // console.log(high)
         
-        /**---------------------------------------------------------------------------------------------------------------------------------------**/
+        /**------------------------------------------------------------------------------------------------**/
         
         // layout for candle stick graph.
           
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function ()
           }
         }
           
-        /**---------------------------------------------------------------------------------------------------------------------------------------- */
+        /**------------------------------------------------------------------------ */
         // view -3 plot
         // let data3 = [
         //   {
@@ -306,20 +306,17 @@ document.addEventListener("DOMContentLoaded", function ()
 });
 
 
+/**------------------------------------------------*/
 // switch between modes
-// var toggle = document.getElementById('toggle');
-
-// toggle.onclick = function () {
-//   document.body.classList.toggle("dark-theme");
-// }
 
 const checkbox = document.getElementById("checkbox")
 checkbox.addEventListener("change", () => {
   document.body.classList.toggle("dark-theme")
 })
 
-/**---------------------------------------------------------------------------------------------------------------------------------------- */
-anime.js
+/**------------------------------------------------*/
+
+// animated header
 let animation = anime({
   targets : '.header',
   translateX : [-500, 0],
