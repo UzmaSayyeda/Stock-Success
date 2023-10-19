@@ -9,23 +9,19 @@ document.addEventListener("DOMContentLoaded", function ()
   selectElement1.addEventListener('change', updateGraph);
   selectElement2.addEventListener('change', updateGraph);
   // selectChart.addEventListener('change')
-​
+
   /// function to update graph
   function updateGraph() {
-​
+
     let ticker1 = selectElement1.value;
     let ticker2 = selectElement2.value;
-​
-​
+
     /// fetch from first ticker
     fetch(`/api/data/${ticker1}`).then(response => response.json()).then(data1 => {
       
       /// then fetch from second ticker
       fetch(`/api/data/${ticker2}`).then(response => response.json()).then(data2 =>{
-​
-​
-​
-​
+
         // plotly line/time series graph
         // defining traces for graph as an array of dictionaries
         const traces = [
@@ -45,13 +41,11 @@ document.addEventListener("DOMContentLoaded", function ()
         
           /**--------------------------------------------------------------------------------------------------------------------------------------- **/
           
-​
-​
-​
+
           // layout for time series / line plot
           var layoutLine = {
             title: 'Time Series',
-​
+
             xaxis: {
 
               range: ["2018-10-01", "2022-12-31"],
