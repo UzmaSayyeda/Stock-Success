@@ -282,14 +282,19 @@ document.addEventListener("DOMContentLoaded", function ()
 
 
 // switch between modes
-var toggle = document.getElementById('toggle');
+// var toggle = document.getElementById('toggle');
 
-toggle.onclick = function () {
-  document.body.classList.toggle("dark-theme");
-}
+// toggle.onclick = function () {
+//   document.body.classList.toggle("dark-theme");
+// }
+
+const checkbox = document.getElementById("checkbox")
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark-theme")
+})
 
 /**---------------------------------------------------------------------------------------------------------------------------------------- */
-// anime.js
+anime.js
 let animation = anime({
   targets : '.header',
   translateX : [-500, 0],
