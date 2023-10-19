@@ -9,12 +9,14 @@ document.addEventListener("DOMContentLoaded", function ()
   selectElement1.addEventListener('change', updateGraph);
   selectElement2.addEventListener('change', updateGraph);
   // selectChart.addEventListener('change')
-
+​
   /// function to update graph
   function updateGraph() {
-
+​
     let ticker1 = selectElement1.value;
     let ticker2 = selectElement2.value;
+
+
 
     /// fetch from first ticker
     fetch(`/api/data/${ticker1}`).then(response => response.json()).then(data1 => {
@@ -64,7 +66,8 @@ document.addEventListener("DOMContentLoaded", function ()
                     step: 'month',
                     stepmode: 'backward'
                   },
-                  { step: 'all' }
+                  { step: 'all',
+                  label: 'All dates'}
                 ]
               },
 
@@ -92,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function ()
               high: data1.map(row => row.High),
               low: data1.map(row => row.Low),
               open: data1.map(row => row.Open),
+              name: ticker1,
                 
               // customize colors
               increasing: { line: { color: '#2279b5' } },
@@ -106,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function ()
               high: data2.map(row => row.High),
               low: data2.map(row => row.Low),
               open: data2.map(row => row.Open),
+              name: ticker2,
                 
               // customize colors
                 
@@ -155,7 +160,8 @@ document.addEventListener("DOMContentLoaded", function ()
                     step: 'month',
                     stepmode: 'backward'
                   },
-                  { step: 'all' }
+                  { step: 'all',
+                  label: 'All dates'}
                 ]
               },
             },
@@ -181,6 +187,7 @@ document.addEventListener("DOMContentLoaded", function ()
               high: data1.map(row => row.High),
               low: data1.map(row => row.Low),
               open: data1.map(row => row.Open),
+              name: ticker1,
               
               // customize colors
               increasing: { line: { color: '#2279b5' } },
@@ -195,6 +202,7 @@ document.addEventListener("DOMContentLoaded", function ()
               high: data2.map(row => row.High),
               low: data2.map(row => row.Low),
               open: data2.map(row => row.Open),
+              name: ticker2,
               
               // customize colors
               increasing: { line: { color: '#2279b5' } },
@@ -233,7 +241,8 @@ document.addEventListener("DOMContentLoaded", function ()
                     step: 'month',
                     stepmode: 'backward'
                   },
-                  { step: 'all' }
+                  { step: 'all',
+                  label: 'All dates'}
                 ]
               },
             },
