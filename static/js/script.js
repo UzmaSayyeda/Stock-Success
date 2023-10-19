@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function ()
               high: data1.map(row => row.High),
               low: data1.map(row => row.Low),
               open: data1.map(row => row.Open),
+              name: ticker1,
                 
               // customize colors
               increasing: { line: { color: '#2279b5' } },
@@ -113,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function ()
               high: data2.map(row => row.High),
               low: data2.map(row => row.Low),
               open: data2.map(row => row.Open),
+              name: ticker2,
                 
               // customize colors
                 
@@ -189,6 +191,7 @@ document.addEventListener("DOMContentLoaded", function ()
               high: data1.map(row => row.High),
               low: data1.map(row => row.Low),
               open: data1.map(row => row.Open),
+              name: ticker1,
               
               // customize colors
               increasing: { line: { color: '#2279b5' } },
@@ -203,6 +206,7 @@ document.addEventListener("DOMContentLoaded", function ()
               high: data2.map(row => row.High),
               low: data2.map(row => row.Low),
               open: data2.map(row => row.Open),
+              name: ticker2,
               
               // customize colors
               increasing: { line: { color: '#2279b5' } },
