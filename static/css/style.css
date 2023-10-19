@@ -74,3 +74,16 @@ body{
     color: var(--primary-color);
     margin-bottom: 10px;
 }
+
+#user-input{
+    flex: 1;
+    text-align: right;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0.5em 3.5em 0.5em 1em;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
