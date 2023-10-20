@@ -77,16 +77,6 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 #ticker-select1{
     flex: 1;
     text-align: center;
@@ -156,4 +146,16 @@ body{
 
 #loading{
     animation: color-change 1s infinite; 
+}
+
+.trading-widget {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.trading-widget {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
 }

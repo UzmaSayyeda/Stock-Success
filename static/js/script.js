@@ -348,3 +348,5 @@ loadingText.style.display = 'block'; // Show the loading block
 
 
 });
+
+
