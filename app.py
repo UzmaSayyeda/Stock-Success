@@ -27,7 +27,7 @@ def get_data(ticker):
 @app.route("/update_db")
 def update_db():
     subprocess.call(["python", "db.py"])
-    return "Database update started."
+    return "Database update Finished."
 
 
 
