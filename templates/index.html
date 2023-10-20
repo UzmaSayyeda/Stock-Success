@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <head>
+        <meta charset="UTF-8">
+        <title>Stock Market Dashboard</title>
+        <link rel="shortcut icon" type="image/png" href="../images/favicon-16x16.png">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script src="https://kit.fontawesome.com/908d1655d0.js" crossorigin="anonymous"></script>
+        
+    </head>
 
-
-<head>
-    <meta charset="UTF-8">
-    <title>Stock Market Dashboard</title>
-    <link rel="shortcut icon" type="image/png" href="../images/favicon-16x16.png">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-   
+    <body>
     
-  
-    
-</head>
+        <header class="header">
+            Stock Market Dashboard
+        </header>
+           
+            <div>
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
+            <div id = "dropdown">
+                <select id="ticker-select1">
+                    <option value="RTX">Rtx Corp</option>
+                    <option value="XOM">Exxon</option>
+                    <option value="CVX">Chevron</option>
+                    <option value="ED">Consolidated Edison</option>
+                    <option value="DUK">Duke Energy</option>
+                    <option value="UPS">United Parcel Service</option>
+                    <option value="SHW">Sherwin-Williams</option>
+                    <option value="DD">DuPont de Nemours</option>
+                    <option value="JNJ">Johnson & Johnson</option>
+                    <option value="PFE">Pfizer</option>
+                    <option value="PG">Procter & Gamble</option>
+                    <option value="MCD">McDonald's</option>
+                    <option value="KO">Coca-Cola</option>
+                    <option value="AMZN">Amazon</option>
+                    <option value="AAPL">Apple</option>
+                    <option value="MSFT">Microsoft</option>
+                    <option value="GOOG">Google</option>
+                    <option value="META">Meta</option>
+                </select>   
 
-<body>
-   
-    <header class="header">Stock Market Dashboard</header>
-    <button id="toggle">Switch Mode</button>
-        <select id="ticker-select1">
-            <option value="XOM">Exxon</option>
-            <option value="CVX">Chevron</option>
-            <option value="SHW">Sherwin-Williams</option>
-            <option value="DD">DuPont de Nemours</option>
-            <option value="UPS">United Parcel Service</option>
-            <option value="RTX">Rtx Corp</option>
-            <option value="DUK">Duke Energy</option>
-            <option value="ED">Consolidated Edison</option>
-            <option value="JNJ">Johnson & Johnson</option>
-            <option value="PFE">Pfizer</option>
-            <option value="AMZN">Amazon</option>
-            <option value="MCD">McDonald's</option>
-            <option value="KO">Coca-Cola</option>
-            <option value="PG">Procter & Gamble</option>
-            <option value="AAPL">Apple</option>
-            <option value="MSFT">Microsoft</option>
-            <option value="GOOG">Google</option>
-            <option value="META">META</option>
-        </select>   
+                <select id="ticker-select2">
+                    <option value="RTX">Rtx Corp</option>
+                    <option value="XOM">Exxon</option>
+                    <option value="CVX">Chevron</option>
+                    <option value="ED">Consolidated Edison</option>
+                    <option value="DUK">Duke Energy</option>
+                    <option value="UPS">United Parcel Service</option>
+                    <option value="SHW">Sherwin-Williams</option>
+                    <option value="DD">DuPont de Nemours</option>
+                    <option value="JNJ">Johnson & Johnson</option>
+                    <option value="PFE">Pfizer</option>
+                    <option value="PG">Procter & Gamble</option>
+                    <option value="MCD">McDonald's</option>
+                    <option value="KO">Coca-Cola</option>
+                    <option value="AMZN">Amazon</option>
+                    <option value="AAPL">Apple</option>
+                    <option value="MSFT">Microsoft</option>
+                    <option value="GOOG">Google</option>
+                    <option value="META">Meta</option>
+                </select>  
+            </div>
 
-        <select id="ticker-select2">
-            <option value="XOM">Exxon</option>
-            <option value="CVX">Chevron</option>
-            <option value="SHW">Sherwin-Williams</option>
-            <option value="DD">DuPont de Nemours</option>
-            <option value="UPS">United Parcel Service</option>
-            <option value="RTX">Rtx Corp</option>
-            <option value="DUK">Duke Energy</option>
-            <option value="ED">Consolidated Edison</option>
-            <option value="JNJ">Johnson & Johnson</option>
-            <option value="PFE">Pfizer</option>
-            <option value="AMZN">Amazon</option>
-            <option value="MCD">McDonald's</option>
-            <option value="KO">Coca-Cola</option>
-            <option value="PG">Procter & Gamble</option>
-            <option value="AAPL">Apple</option>
-            <option value="MSFT">Microsoft</option>
-            <option value="GOOG">Google</option>
-            <option value="META">META</option>
-        </select>  
         <select id = "user-input">
-            <option value="linechart">1</option>
-            <option value="candlestick">2</option>
-            <option value="holc">3</option>
+            <option value="view-1">Time Series</option>
+            <option value="view-2">Candlestick</option>
+            <option value="view-3">OHLC</option>
         </select>
-        <div id="view-1" class="container"></div>
-        <div id="view-2" class="container"></div>
-        <div id = "view-3" class="container"></div>
-   
-   
-    <script src="../static/js/script.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
- 
 
- 
-   
-    
-</body>
+        <div id="plotly-chart" class="container"></div>
+
+        <script src="../static/js/script.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    </body>
 
 </html>
