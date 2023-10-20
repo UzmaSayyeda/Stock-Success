@@ -119,3 +119,8 @@ body{
     color: var(--primary-color);
     margin-bottom: 10px;
 }
+
+.trading-widget {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
