@@ -3,10 +3,10 @@ import sqlite3
 import sqlalchemy as sql
 import pandas as pd
 
-conn = sqlite3.connect("test_stock_market1.db")
+conn = sqlite3.connect("stock_market.db")
 cursor = conn.cursor()
 
-engine = sql.create_engine("sqlite:///test_stock_market1.db")
+engine = sql.create_engine("sqlite:///stock_market.db")
 
 import yfinance as yf
 from datetime import datetime
@@ -30,7 +30,7 @@ df.reset_index(inplace=True)
 
 print(df.sample(10))
 
-df.to_sql("test_stock_market1", engine, if_exists="replace")
+df.to_sql("stock_market", engine, if_exists="replace")
 
 conn.commit()
 conn.close()
