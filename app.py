@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify
 import sqlite3
+import subprocess
 
 app = Flask(__name__)
 
@@ -19,6 +20,17 @@ def get_data(ticker):
     
     conn.close()
     return jsonify(data)
+
+
+
+
+@app.route("/update_db")
+def update_db():
+    subprocess.call(["python", "db.py"])
+    return "Database update Finished."
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

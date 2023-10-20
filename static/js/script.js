@@ -309,9 +309,9 @@ document.addEventListener("DOMContentLoaded", function ()
 /**------------------------------------------------*/
 // switch between modes
 
-const checkbox = document.getElementById("checkbox")
-checkbox.addEventListener("change", () => {
-  document.body.classList.toggle("dark-theme")
+const checkbox = document.getElementById('checkbox')
+checkbox.addEventListener('change', () => {
+  document.body.classList.toggle('dark-theme')
 })
 
 /**------------------------------------------------*/
@@ -326,3 +326,27 @@ let animation = anime({
   easing : 'easeInOutCirc',
   autoplay : true
 })
+
+
+
+// Updating database, button 
+document.querySelector('#updateButton').addEventListener('click', function() {  // When the button is clicked the function is called
+
+
+const loadingText = document.getElementById('loading'); // Get the loading block from the HTML
+loadingText.style.display = 'block'; // Show the loading block
+
+
+  fetch('/update_db')
+      .then(response => response.text()) // Get the data as a text
+      .then(data => {
+        alert(data); // Shows the popup with the result from Flask
+        loadingText.style.display = 'none';}) // Hide the loading block
+        .catch(error => console.error('error',error));
+
+
+
+
+});
+
+

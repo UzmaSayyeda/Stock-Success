@@ -27,15 +27,15 @@ body{
     background-color: var(--secondary-color);
     color: var(--primary-color);
     width: 100vw;
-    height:70px;
     padding-top: 20px;
+    
 } 
 
 
 .container{
     color: var(--secondary-color);
     font-size: 20px;
-    height: 100%;
+    height: 600px;
     width: 100%;
 }
 
@@ -57,7 +57,6 @@ body{
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     float: right;
 }
 
@@ -77,16 +76,6 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 #ticker-select1{
     flex: 1;
     text-align: center;
@@ -94,7 +83,7 @@ body{
     font-size: 15px;
     display: inline-block;
     border-radius: 4px;
-    padding: 0.5em 3.5em 0.5em 1em;
+    padding: 5px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     margin-bottom: 10px;
@@ -107,14 +96,22 @@ body{
     font-size: 15px;
     display: inline-block;
     border-radius: 4px;
-    padding: 0.5em 3.5em 0.5em 1em;
+    padding: 5px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     margin-bottom: 10px;
 }
 
-#dropdwon{
+#dropdown{
     margin-top: 10px;
+}
+
+#ticker-select2:hover{
+    opacity: 0.8;
+}
+
+#ticker-select1:hover{
+    opacity: 0.8;
 }
 
 #user-input{
@@ -124,8 +121,54 @@ body{
     font-size: 15px;
     display: inline-block;
     border-radius: 4px;
-    padding: 0.5em 3.5em 0.5em 1em;
+    padding: 5px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     margin-bottom: 10px;
+}
+
+#user-input:hover{
+    opacity: 0.8;
+}
+
+
+#updateButton{
+    border: none;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    transition: opacity 0.15s
+}
+
+#updateButton:hover{
+    opacity: 0.8;
+}
+
+
+/*Color change in Text from id #loading */
+@keyframes color-change {
+    0% {color :rgb(0, 0, 0)}
+    25% {color: rgb(252, 177, 0)}
+    50% {color: rgb(255, 255, 0)}
+    75% {color: rgb(232, 159, 14)}
+    100% {color: rgb(255, 0, 0)}
+}
+
+#loading{
+    animation: color-change 1s infinite; 
+}
+
+.trading-widget {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 1rem;
+    width: 500px;    
+
 }
