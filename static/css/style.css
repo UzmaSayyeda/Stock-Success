@@ -1,0 +1,126 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+:root{
+    --primary-color: #fff;
+    --secondary-color : orangered;
+}
+
+.dark-theme{
+    --primary-color: #000106;
+    --secondary-color : #B4B4B3;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+
+.header {
+    display: block; 
+    font-family: Helvetica;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    width: 100vw;
+    height:70px;
+    padding-top: 20px;
+} 
+
+
+.container{
+    color: var(--secondary-color);
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.fa-moon {color: #f1c40f;}
+.fa-sun {color : #f39c12}
+
+.checkbox-label {
+    background-color: var(--primary-color);
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    float: right;
+}
+
+.checkbox-label .ball {
+    background-color: var(--secondary-color);
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(26px);
+}
+
+
+#ticker-select1{
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0.5em 3.5em 0.5em 1em;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+#ticker-select2{
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0.5em 3.5em 0.5em 1em;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+#dropdwon{
+    margin-top: 10px;
+}
+
+#user-input{
+    flex: 1;
+    text-align: right;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0.5em 3.5em 0.5em 1em;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.trading-widget {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
