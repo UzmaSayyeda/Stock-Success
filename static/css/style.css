@@ -77,16 +77,6 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 #ticker-select1{
     flex: 1;
     text-align: center;
@@ -128,6 +118,11 @@ body{
     background-color: var(--secondary-color);
     color: var(--primary-color);
     margin-bottom: 10px;
+}
+
+.trading-widget {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 
