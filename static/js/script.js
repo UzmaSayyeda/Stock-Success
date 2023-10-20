@@ -326,3 +326,5 @@ let animation = anime({
   easing : 'easeInOutCirc',
   autoplay : true
 })
+
+

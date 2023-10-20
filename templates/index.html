@@ -71,6 +71,8 @@
                 </select>  
             </div>
 
+            
+
         <select id = "user-input">
             <option value="view-1">Time Series</option>
             <option value="view-2">Candlestick</option>
@@ -78,6 +80,24 @@
         </select>
 
         <div id="plotly-chart" class="container"></div>
+
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                {
+                "feedMode": "all_symbols",
+                "colorTheme": "light",
+                "isTransparent": false,
+                "displayMode": "regular",
+                "width": 480,
+                "height": 830,
+                "locale": "en"
+                }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
 
         <script src="../static/js/script.js"></script>
         <script src="https://d3js.org/d3.v5.min.js"></script>
