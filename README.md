@@ -2,9 +2,21 @@
 
 # Stock Market Dashboard
 
+## Project Overview
+
 Our project is designed to provide investors with comprehensive and up-to-date information on the top-performing stocks across various sectors like energy, materials, industrials, utilities, healthcare, financials, consumer goods, IT, communication, and real estate. We offer an interactive dashboard that presents daily open and close stock data, as well as a range of charts that reflect the day change, candlestick graphs, and heat maps based on the biggest stock movers per industry that allow users to easily visualize trends and identify potential opportunities. Our platform is user-friendly and intuitive, making it easy for investors of all levels to access the information they need to make informed decisions
 
-## Features of our Dashboard
+## Usage and Installation Instructions of Libraries/Tools
+
+## Introduction 
+
+## Project Goals and How We Achieved Them
+
+## Data Processing/Gathering
+
+## Analysis and Modeling of our Visulizations/Findings
+
+## Visuals and Explanation of our Dashboard
 
 - Time Series Data (1-month, 6-month, and all-time)
 - Interactive Charts (Candlestick Graphs, Heat Maps, Line Graphs )
@@ -13,14 +25,19 @@ Our project is designed to provide investors with comprehensive and up-to-date i
 - Live News Feed
 - Light/Dark Mode
 
-## Data
+## Additional Explanations
 
-We used the following APIs to collect data for our project:
+## Major Findings
 
-## Interactivity and Key Metrics
+## Limitations and Future Development
 
-insert text here
+## Conclusion
 
-## Trends and Insights
+## References
 
-insert text here
+## Team Members
+
+- Uzma Sayyeda
+- Arnold Vincent
+- Maria Diosdado
+- Sully Shave
