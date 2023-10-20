@@ -326,3 +326,12 @@ let animation = anime({
   easing : 'easeInOutCirc',
   autoplay : true
 })
+
+
+
+
+document.querySelector("#updateButton").addEventListener("click", function() {
+  fetch("/update_db")
+      .then(response => response.text())
+      .then(data => console.log(data));
+});
