@@ -1,10 +1,10 @@
-import requests
-import sqlite3
+# import requests
+# import sqlite3
 import sqlalchemy as sql
 import pandas as pd
 
-conn = sqlite3.connect("stock_market.db")
-cursor = conn.cursor()
+# conn = sqlite3.connect("stock_market.db")
+# cursor = conn.cursor()
 
 engine = sql.create_engine("sqlite:///stock_market.db")
 
@@ -32,5 +32,5 @@ print(df.sample(10))
 
 df.to_sql("stock_market", engine, if_exists="replace")
 
-conn.commit()
-conn.close()
+# conn.commit()
+# conn.close()

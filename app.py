@@ -22,14 +22,10 @@ def get_data(ticker):
     return jsonify(data)
 
 
-
-
 @app.route("/update_db")
 def update_db():
     subprocess.call(["python", "db.py"])
     return "Database update Finished."
-
-
 
 
 if __name__ == "__main__":
