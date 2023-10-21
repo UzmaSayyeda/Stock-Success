@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function ()
                   stepmode: 'backward'
                 },
                 { step: 'all',
-                label: 'All dates'}
+                label: '5 Years'}
               ]
             },
 
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function ()
                   stepmode: 'backward'
                 },
                 { step: 'all',
-                label: 'All dates'}
+                label: '5 Years'}
               ]
             },
           },
@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function ()
                   stepmode: 'backward'
                 },
                 { step: 'all',
-                label: 'All dates'}
+                label: '5 Years'}
               ]
             },
           },
