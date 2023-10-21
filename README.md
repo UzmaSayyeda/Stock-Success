@@ -34,18 +34,19 @@ The project aims to create an interactive stock market dashboard. Goals were det
 ## Conclusion
 From our data we can conclude that the stock market was growing in 2019. In 2020 (which consides with the Covid pandemic) the stock market took a hit. That is not to say that all industries in the stock market were negatively affected. The healthcare giants J&J and Pfizer maintained stability during this period while Exxon and Chevron shrunk due to travel restrictions resulting in decreased demand. Most of our sample stocks seemed to have made a recovery after covid ( like Consolidated Edison and Duke Energy) but current government policies still affect it. One example is the Fed's decision to maintain a target interest rates in order to help alliviate inflation and the uncertainty regarding a possible recession.
 ## References
-Dark Mode Button: https://www.instagram.com/p/Cyi7GlctYBG/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D&img_index=1
-Widget: https://www.tradingview.com/widget/
-Anime.js Header: https://www.sitepoint.com/get-started-anime-js/
-Dark Theme: https://youtu.be/9LZGB3OLXNQ?si=gZ1M80J-NUNdJ3Lq
-Drop_Down Menu: Stackoverflow.com
-https://www.forbes.com/advisor/investing/stock-market-outlook-and-forecast/
-Ted's Air Quality Example
-Plotly Documentation and animejs documentation
+[Dark Mode Button](https://www.instagram.com/p/Cyi7GlctYBG/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D&img_index=1)  
+[Widget](https://www.tradingview.com/widget/)  
+[Anime.js Header](https://www.sitepoint.com/get-started-anime-js/)
+[Dark Theme](https://youtu.be/9LZGB3OLXNQ?si=gZ1M80J-NUNdJ3Lq)  
+[Drop_Down Menu](Stackoverflow.com)  
+[Forbes Stock Market Outlook](https://www.forbes.com/advisor/investing/stock-market-outlook-and-forecast/)  
+Ted's Air Quality Example  
+[Plotly Documentation](https://plotly.com/javascript/)    
+[Animejs Documentation](https://animejs.com/)  
 
 ## Team Members
 
-- Uzma Sayyeda
-- Arnold Vincent
-- Maria Diosdado
-- Sully Shave
+- [Uzma Sayyeda](https://github.com/UzmaSayyeda)  
+- [Arnold Vincent](https://github.com/T800-101A)  
+- [Maria Diosdado](https://github.com/mariadiosdado)  
+- [Sullivan Shave](https://github.com/sullivanshave)  

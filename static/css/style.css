@@ -167,8 +167,6 @@ body{
 
 .trading-widget {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    gap: 1rem;
-    width: 500px;    
+    grid-template-columns: 1fr 3fr 1fr;
 
 }
