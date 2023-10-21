@@ -9,9 +9,9 @@ Our project is designed to provide investors with comprehensive and up-to-date i
 ## Usage and Installation Instructions of Libraries/Tools
 
 ## Introduction 
-
+Our project Stock-Success analyzes real live data from Global Industry Classification Standard (GICS) stock market sectors. From each of the major industries we choose to analyze two competing stocks. The results are several interactive graphs that allow the user to pick from a dropdown menu two stocks and their accompanying data. Other widgets present the user with news updates and live stock market updates.
 ## Project Goals and How We Achieved Them
-
+The project aims to create an interactive stock market dashboard. Goals were determined by alloted working time during class. First, finding an API and creating a database to store data. By the end of the second class period a Python Flask API had been craeted that returned data to index.html. The second week, the team focused on creating the accompanying visualization: a line chart, candlestick, and OHLC. When the most important goals had been achieved, we moved to target the small details that make the stock market dashboard user friendly. A dark-mode setting was created, a drop-down menu was added allowing the user to view only one graph at a time, and other widgets were also added. Everything was achieved through organization, time-management, and colaboration.
 ## Data Processing/Gathering
 
 ## Analysis and Modeling of our Visulizations/Findings
@@ -32,8 +32,16 @@ Our project is designed to provide investors with comprehensive and up-to-date i
 ## Limitations and Future Development
 
 ## Conclusion
-
+From our data we can conclude that the stock market was growing in 2019. In 2020 (which consides with the Covid pandemic) the stock market took a hit. That is not to say that all industries in the stock market were negatively affected. The healthcare giants J&J and Pfizer maintained stability during this period while Exxon and Chevron shrunk due to travel restrictions resulting in decreased demand. Most of our sample stocks seemed to have made a recovery after covid ( like Consolidated Edison and Duke Energy) but current government policies still affect it. One example is the Fed's decision to maintain a target interest rates in order to help alliviate inflation and the uncertainty regarding a possible recession.
 ## References
+Dark Mode Button: https://www.instagram.com/p/Cyi7GlctYBG/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D&img_index=1
+Widget: https://www.tradingview.com/widget/
+Anime.js Header: https://www.sitepoint.com/get-started-anime-js/
+Dark Theme: https://youtu.be/9LZGB3OLXNQ?si=gZ1M80J-NUNdJ3Lq
+Drop_Down Menu: Stackoverflow.com
+https://www.forbes.com/advisor/investing/stock-market-outlook-and-forecast/
+Ted's Air Quality Example
+Plotly Documentation and animejs documentation
 
 ## Team Members
 
