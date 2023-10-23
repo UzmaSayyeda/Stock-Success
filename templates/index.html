@@ -94,7 +94,6 @@
        
             <div id="plotly-chart" class="container"></div>
 
-        
 
             <!-- Tape widget -->
             <div class="tradingview-widget-container">
@@ -102,18 +101,11 @@
                 <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
                 {
-                    "symbols"; [
-                    {
-                        "description": "",
-                        "proName": "NASDAQ:TSLA"
-                    },
+                    "symbols": [
+                    
                     {
                         "description": "",
                         "proName": "NASDAQ:AAPL"
-                    },
-                    {
-                        "description": "",
-                        "proName": "NASDAQ:NVDA"
                     },
                     {
                         "description": "",
@@ -133,11 +125,15 @@
                     },
                     {
                         "description": "",
-                        "proName": "NASDAQ:PYPL"
+                        "proName": "NYSE:PG"
                     },
                     {
                         "description": "",
                         "proName": "NYSE:PFE"
+                    },
+                    {
+                        "description": "",
+                        "proName": "NYSE:DD"
                     },
                     {
                         "description": "",
@@ -153,7 +149,7 @@
                     },
                     {
                         "description": "",
-                        "proName": "NYSE:DD"
+                        "proName": "NYSE:ED"
                     },
                     {
                         "description": "",
@@ -177,18 +173,22 @@
                     },
                     {
                         "description": "",
+                        "proName": "NYSE:KO"
+                    },
+                    {
+                        "description": "",
                         "proName": "NYSE:MCD"
                     }
                     ],
-                    "showSymbolLogo" ; true,
-                    "colorTheme" ; "light",
-                    "isTransparent"; false,
-                    "displayMode"; "adaptive",
-                    "locale"; "en"
+                    "showSymbolLogo" : true,
+                    "colorTheme" : "light",
+                    "isTransparent": false,
+                    "displayMode": "adaptive",
+                    "locale": "en"
                 }
                 </script>
-          </div>
-            <!-- TradingView Widget END -->
+          </div> 
+            
 
         <div class="trading-widget">
          
@@ -233,7 +233,8 @@
                     "height": "100%"
                 }
                 </script>
-            </div>
+            </div> 
+
             <!-- Top 5 Stocks widget -->         
             <div class="tradingview-widget-container">
                 <div class="tradingview-widget-container__widget"></div>
