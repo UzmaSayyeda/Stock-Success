@@ -32,7 +32,7 @@ The project aims to create an interactive stock market dashboard. Goals were det
 ## Limitations and Future Development
 
 ## Conclusion
-From our data we can conclude that the stock market was growing in 2019. In 2020 (which consides with the Covid pandemic) the stock market took a hit. That is not to say that all industries in the stock market were negatively affected. The healthcare giants J&J and Pfizer maintained stability during this period while Exxon and Chevron shrunk due to travel restrictions resulting in decreased demand. Most of our sample stocks seemed to have made a recovery after covid ( like Consolidated Edison and Duke Energy) but current government policies still affect it. One example is the Fed's decision to maintain a target interest rates in order to help alliviate inflation and the uncertainty regarding a possible recession.
+From our data, we can conclude that the stock market was growing in 2019. In 2020, which coincides with COVID-19 pandemic, the stock market took a massive hit. That is not to say that all industries in the stock market were negatively affected, however. Healthcare giants J&J and Pfizer maintained stability during this period, whereas Exxon and Chevron shrunk due to travel restrictions, yielding an overall decrease in demand to do so. Most of our sample stocks appeared to recover after the pandemic (i.e. Consolidated Edison and Duke Energy), but ongoing government policies still play a role in the strength of various stocks. One example is the federal government’s decision to maintain a target interest rate in order to both help alleviate inflation and prevent another recession. 
 ## References
 [Dark Mode Button](https://www.instagram.com/p/Cyi7GlctYBG/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D&img_index=1)  
 [Widget](https://www.tradingview.com/widget/)  
@@ -42,7 +42,8 @@ From our data we can conclude that the stock market was growing in 2019. In 2020
 [Forbes Stock Market Outlook](https://www.forbes.com/advisor/investing/stock-market-outlook-and-forecast/)  
 Ted's Air Quality Example  
 [Plotly Documentation](https://plotly.com/javascript/)    
-[Animejs Documentation](https://animejs.com/)  
+[Animejs Documentation](https://animejs.com/)   
+[Analysis with yfinance](https://thecleverprogrammer.com/2023/05/08/stock-market-performance-analysis-using-python/)
 
 ## Team Members
 
