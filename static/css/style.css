@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* setting variables for dark-theme */
 
 :root{
     --primary-color: #fff;
@@ -17,6 +18,7 @@ body{
     background-color: var(--primary-color);
 }
 
+/* styled header */
 
 .header {
     display: block; 
@@ -31,13 +33,15 @@ body{
     
 } 
 
-
+/* styled graphs section */
 .container{
     color: var(--secondary-color);
     font-size: 20px;
     height: 600px;
     width: 100%;
 }
+
+/* dark theme toggle */
 
 .checkbox {
     opacity: 0;
@@ -46,6 +50,8 @@ body{
 
 .fa-moon {color: #f1c40f;}
 .fa-sun {color : #f39c12}
+
+
 
 .checkbox-label {
     background-color: var(--primary-color);
@@ -75,6 +81,7 @@ body{
     transform: translateX(26px);
 }
 
+/* styled dropdowns */
 
 #ticker-select1{
     flex: 1;
@@ -105,6 +112,7 @@ body{
 #dropdown{
     margin-top: 10px;
 }
+/* hover on buttons */
 
 #ticker-select2:hover{
     opacity: 0.8;
@@ -131,6 +139,7 @@ body{
     opacity: 0.8;
 }
 
+/* styled update dashboard button */
 
 #updateButton{
     border: none;
@@ -164,6 +173,8 @@ body{
 #loading{
     animation: color-change 1s infinite; 
 }
+
+/* grid display for widgets */
 
 .trading-widget {
     display: grid;

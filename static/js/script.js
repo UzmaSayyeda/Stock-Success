@@ -276,18 +276,7 @@ document.addEventListener("DOMContentLoaded", function ()
         };
         
           
-        // Plotly.newPlot('view-1', traces, layoutLine, config);
-        // Plotly.newPlot('view-2', traces2, layoutView2, config);
-        // Plotly.newPlot('view-3', traces3, layoutView3, config);
         
-        // just to check if data is being fetched
-        // console.log(data.map(row => row.Date));
-        // console.log(data.map(row => row.Open));
-
-
-
-
-
       }).catch(error => console.error('Error:', error));
     })
   };
