@@ -66,8 +66,6 @@ The data was gathered from Yahoo Finance using the yfinance python library. For 
 
 The data was then cleaned and stored in a database using Pandas and SQLAlchemy. The data was then returned to the ```index.html``` file using a Python Flask API. The data was then used to create the visualizations using Plotly.
 
-## Analysis and Modeling of our Visulizations/Findings
-
 ## Visuals and Explanation of our Dashboard
 
 - Time Series Data (1-month, 6-month, and all-time)
@@ -77,9 +75,33 @@ The data was then cleaned and stored in a database using Pandas and SQLAlchemy. 
 - Live News Feed
 - Light/Dark Mode
 
-## Additional Explanations
+## Analysis and Modeling of our Visulizations/Findings
 
-## Major Findings
+#### Front Page of Dashboard
+
+![Single Stock](images/single_graph_view.png)
+
+#### Time Series of Two Different Stocks
+
+![Two Stocks](images/two_stock_time_series.png)
+
+#### Candlestick Graphs with Interactive Timeline
+
+![Candlestick with Timeline](images/candlestick_with_timeline.png)
+
+#### Time Series with OHLC Data
+
+![OHLC](images/OHLC_two_stocks.png)
+
+#### Plotly Tools for Our Visualizations
+
+![Plotly Tools for Following Visualizations](images/plotly_interactive_tools.png)
+
+#### Overview of Widgets that Provide Live News and Stock Market Updates
+
+![Widgets](images/news_heatmap_AGL.png)
+
+## Additional Explanations
 
 ## Limitations and Future Development
 
