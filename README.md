@@ -1,4 +1,4 @@
-![Header](images/pexels-monstera-production-5849595.jpg)
+![Header](images/Header_Image.jpg)
 
 # Stock Market Dashboard
 
@@ -7,6 +7,28 @@
 Our project is designed to provide investors with comprehensive and up-to-date information on the top-performing stocks across various sectors like energy, materials, industrials, utilities, healthcare, financials, consumer goods, IT, communication, and real estate. We offer an interactive dashboard that presents daily open and close stock data, as well as a range of charts that reflect the day change, candlestick graphs, and heat maps based on the biggest stock movers per industry that allow users to easily visualize trends and identify potential investment opportunities. Our platform is user-friendly and intuitive, making it easy for investors of all levels to access the information they need to make informed decisions.
 
 ## Usage and Installation Instructions of Libraries/Tools
+
+To run the dashboard, you will need to first install the following libraries locally:
+
+![Libraries](images/required_imports.png)
+
+### Step 1: Clone the repository
+
+### Step 2: Open the repository in VS Code
+
+You should see the following project contents:
+
+![Project Contents](images/Contents_of_Project.png)
+
+### Step 3: Select the ```app.py``` file and open a new terminal window
+
+![Terminal](images/terminal_step_1.png)
+
+### Step 4: Run the following command in the terminal window: ```python app.py```
+
+![Running Script](images/terminal_step_2.png)
+
+### Step 5: Follow the link provided in the terminal window and the dashboard will open in your browser.
 
 ## Introduction 
 
