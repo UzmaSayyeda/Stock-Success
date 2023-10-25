@@ -4,17 +4,17 @@
 
 ## Project Overview
 
-Our project is designed to provide investors with comprehensive and up-to-date information on the top-performing stocks across various sectors like energy, materials, industrials, utilities, healthcare, financials, consumer goods, IT, communication, and real estate. We offer an interactive dashboard that presents daily open and close stock data, as well as a range of charts that reflect the day change, candlestick graphs, and heat maps based on the biggest stock movers per industry that allow users to easily visualize trends and identify potential opportunities. Our platform is user-friendly and intuitive, making it easy for investors of all levels to access the information they need to make informed decisions
+Our project is designed to provide investors with comprehensive and up-to-date information on the top-performing stocks across various sectors like energy, materials, industrials, utilities, healthcare, financials, consumer goods, IT, communication, and real estate. We offer an interactive dashboard that presents daily open and close stock data, as well as a range of charts that reflect the day change, candlestick graphs, and heat maps based on the biggest stock movers per industry that allow users to easily visualize trends and identify potential investment opportunities. Our platform is user-friendly and intuitive, making it easy for investors of all levels to access the information they need to make informed decisions.
 
 ## Usage and Installation Instructions of Libraries/Tools
 
 ## Introduction 
 
-Our project Stock-Success analyzes real live data from Global Industry Classification Standard (GICS) stock market sectors. From each of the major industries we choose to analyze two competing stocks. The results are several interactive graphs that allow the user to pick from a dropdown menu two stocks and their accompanying data. Other widgets present the user with news updates and live stock market updates.
+Our project, **Stock-Success**, analyzes live data from Global Industry Classification Standard (GICS) stock market sectors. We chose to analyze two competing stocks from each major sector. On the dashboard, several interactive graphs allow users to pick up to two stocks from a dropdown menu and the accompanying data appears below. Widgets present the user with live news and stock market updates.
 
 ## Project Goals and How We Achieved Them
 
-The project aims to create an interactive stock market dashboard. Goals were determined by alloted working time during class. First, finding an API and creating a database to store data. By the end of the second class period a Python Flask API had been craeted that returned data to index.html. The second week, the team focused on creating the accompanying visualization: a line chart, candlestick, and OHLC. When the most important goals had been achieved, we moved to target the small details that make the stock market dashboard user friendly. A dark-mode setting was created, a drop-down menu was added allowing the user to view only one graph at a time, and other widgets were also added. Everything was achieved through organization, time-management, and colaboration.
+Our project aims to create an interactive stock market dashboard. End goals were determined over the course of two weeks. First, finding an API and creating a database to store data. By the end of week one, a Python Flask API had been implemented which returned data to the ```index.html``` file. During week two, the team focused on creating several visualizations: a line chart, candlestick, and OHLC. Once our initial end goals were met, our next focus was to make the dashboard as user-friendly as possible. A dark-mode setting was implemented, an additional drop-down menu was added which allows users to view just a single graph instead of two, and more widgets were added. Organization, effective time-management, and collaboration amongst the group allowed us to go beyond our anticipated goals.
 
 ## Data Processing/Gathering
 
