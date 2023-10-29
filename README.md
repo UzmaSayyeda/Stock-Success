@@ -101,9 +101,25 @@ The data was then cleaned and stored in a database using Pandas and SQLAlchemy. 
 
 ![Widgets](images/news_heatmap_AGL.png)
 
-## Additional Explanations
-
 ## Limitations and Future Development
+
+#### Challenges
+
+Throughout the course of the project, we encountered several challenges and limitations. The first was choosing which data source to use. We had initially intended on using the **Polygon.io API**, but we soon realized that the complexity this API entails was not realistic for our two week deadline. Thus, we opted for the **yfinance** library, which is Python-based, free to use, and simple to use. With that being said, however, we recognize the potential benefits that Polygon.io could provide us, especially for more complex or professional applications. Its real-time data, extensive coverage, and highly-specific data would provide us valuable features for future iterations of our project, especially as our application grows and requires more advanced functionalities.
+
+Another challenge we faced was the data retrieval via Flask API. It was a laborious task to retrieve specific data based on the ticker symbol from the SQLite database and to return the data in a format that our front-end could easily interpret and display. In the beginning, we had a list of tuples giving us more problems at the time of accessing directly into the columns and rows from the data. Despite this challenge, our solution was to implement a Flask route, `/api/data/<ticker>`, that responds to GET requests related to a specific ticker symbol. The data is fetched from a SQLite database, converted into a list of dictionaries with column names as keys, and then returned as JSON using Flask's jsonify function. Our JavaScript code then fetches this data and uses it to render the appropriate chart using Plotly.
+
+Furthermore, we struggled with the drop-down selection of tickers as well as viewing the graph of only a single ticker. By leveraging JavaScript event listeners and manipulating DOM, we were able to create a dynamic drop down menu that updates the view based on the user's selection, ultimately creating a change event when the data is fetched at the Flask endpoint. This allowed us to render different types of charts (Time Series, Candlestick, OHLC) based on the user's input by Maping the x and y field of the trace objects.
+
+#### Limitations
+
+Our limitations at this point revolve around the dark-mode of the graphs, limited metrics, and the overall security. We understand that users might need more detailed information for their analysis, yet our dashboard only provides a limited set of metrics. We can add functionality into our dashboard by including more metrics, such as volume data, moving averages, and technical indicators. In terms of security, our dashboard does not provide any user authentication or authorization mechanisms. For this, we can add extra functionality to provide personalized experiences and to improve the security of our application.
+
+#### Future Development
+
+As of now, our dashboard is running in a local environment. We look to deploy our dashboard to the cloud, so that users can access it from anywhere at any time via platforms like AWS, Google Cloud, etc. To enhance the user experience, we have started using the **Anime.js** library for animations. In the future, to add more interactive and engaging animations to our web application we can utilize more css edition or other libraries.
+
+We will continue to refine our database updating process to ensure our data remains current and accurate.Currently, we show a "loading" indicator during updates to provide feedback to the user, same as once the update is completed a popup box is shown. We look to improve this by having the latest data loaded at the time of refresh.
 
 ## Conclusion
 
